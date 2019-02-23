@@ -145,6 +145,8 @@ public class MusicOrganizer
             playTrack(index);
         }
     }
+    
+    
 
     /**
      * Determine whether the given index is valid for the collection.
