@@ -146,7 +146,22 @@ public class MusicOrganizer
         }
     }
     
+    public void playAll()
+    {
+        Random rand = new Random();
+        ArrayList<Track> toPlay = new ArrayList<Track>(tracks);
+        while(toPlay.size() > 0)
+        {
+            int index = rand.nextInt(toPlay.size());
+            Track track = toPlay.remove(index);
+            player.playSample(track.getFilename());
+        }
+    }
     
+    /**
+     * It is easy to shuffle the list, and I'm not sure of any
+     * library methods that could help make this better.
+     */
 
     /**
      * Determine whether the given index is valid for the collection.
